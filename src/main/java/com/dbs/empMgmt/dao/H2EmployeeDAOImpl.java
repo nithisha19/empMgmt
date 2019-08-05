@@ -19,7 +19,7 @@ public class H2EmployeeDAOImpl implements EmployeeDAO {
 
     @Override
     public Employee save(Employee employee) {
-        this.jdbcTemplate.execute("insert into employee (id) values ('"+employee.getId()+" )");
+        this.jdbcTemplate.execute("insert into employee (id) values ("+employee.getId()+" )");
         return employee;
     }
 
